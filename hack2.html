@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h3>length of substring</h3>
+    <script>
+      // var str ='ABCDEFGABEF';
+
+      // let strfi = str.reduce('ABCDEFGABEF');
+      // console.log(strfi);
+
+      // var NonReapeatedCharacter = function(string) {
+      //   for(var i=0; i<str.length;i++){
+      //  document.write(`${str.length}`)
+         
+      //   }
+      // };
+
+      //  document.write(`${str.length}`)
+      let ageGroup = ['A','B','C','D','E','F','G','A','B','E','F'];
+ 
+        let res = ageGroup.reduce(function(ac,cu){
+            console.log(`ac=`,ac);
+            //console.log(`ac=`,cu);
+            if(ac.indexOf(cu)=== -1){
+                ac.push(cu);
+                console.log(`res ac=`,ac);
+
+            }
+            return ac;
+        }, []);
+
+        console.log(`res=`, res);
+        document.write(`${res.length}`);
+    </script>
+</body>
+</html>

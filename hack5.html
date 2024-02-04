@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>paragraph</h3>
+    
+    <script>
+        function isPangram(str) {
+    str = str.toLowerCase();
+
+    const charSet = new Set();
+
+    for (let char of str) {
+        if (char >= 'a' && char <= 'z') {
+            charSet.add(char); 
+        }
+    }
+
+    return charSet.size === 26;
+}
+
+// Input
+const str = "The quick brown fox jumps over the lazy dog";
+console.log(isPangram(str)); // Output: true
+
+    </script>
+</body>
+</html>
